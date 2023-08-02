@@ -214,6 +214,36 @@ console.log(a);
 
 //ReferenceError: a is not defined
 
+// There are two types of hoisting in JavaScript:
+
+// Variable hoisting: Variable hoisting moves variable declarations to the top of their scope, even if they are not initialized. This means that you can access a variable before it is declared, as long as you do not try to use it.
+// Function hoisting: Function hoisting moves function declarations to the top of their scope, even if they are not defined. This means that you can call a function before it is defined, as long as you do not try to use any of the function's variables or parameters.
+
+
+
+//Variable hoisting
+
+
+var x;
+
+console.log(x); // This will not cause an error because x is hoisted
+
+x = 10;
+
+//undefined
+
+//function hoisting 
+
+function myFunction() {
+    console.log("This is my function");
+  }
+  
+  myFunction(); // This will not cause an error because myFunction is hoisted
+
+// This is my function
+
+  
+
 
 
 

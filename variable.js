@@ -148,5 +148,72 @@ console.log(a);
 
 //SyntaxError: Identifier 'a' has already been declared
 
+//now understanding scoping 
+//1) GLOBEL SCOPING 
+//2) FUNCTION SCOPING
+//3) LOCAL SCOPING 
+
+//1) GLOBEL SCOPING 
+var a = 'krunal-majama-ne'
+
+console.log(a);
+
+//'krunal-majama-ne'
+
+let a = 'krunal-majama-ne'
+console.log(a);
+
+//krunal-majama-ne
+
+const a = 'krunal-majama-ne'
+console.log(a);
+
+//'krunal-majama-ne'
+
+// above three are part of globel scope 
+
+//2) now understanding FUNCTION SCOPE 
+
+function krunal() {
+console.log('hii-krunal');
+}
+krunal()
+//hii-krunal
+
+//3) now understanding LOCAL SCOPE 
+let a = 2  // globel scope 
+function krunal(){
+    console.log('majamane-krunal-don');
+     let a = 10  // local scope 
+    console.log(a);
+}
+krunal()
+
+//10
+
+let a = 3 // globel scope 
+
+function krunal() {
+
+    console.log('majam-ne-bhai-sachin');
+   
+      a = 4
+    console.log(a);
+}
+krunal()
+
+//4 
+
+
+function krunal() {
+    let a = 2
+    console.log('majam-ne-sachin');
+}
+krunal()
+console.log(a);
+
+//ReferenceError: a is not defined
+
+
 
 
